@@ -18,9 +18,9 @@ export class BookComponent implements OnInit {
 
   ngOnInit() {
     this.postForm = this.fb.group({
-      title: ['', [Validators.required, Validators.minLength(10)]],
-      author: ['', [Validators.required, Validators.minLength(10)]],
-      description: ['', [Validators.required, Validators.minLength(10)]],
+      tag: ['', [Validators.required, Validators.minLength(5)]],
+      url: ['', [Validators.required, Validators.minLength(4)]],
+      descriptions: ['', [Validators.required, Validators.minLength(10)]],
     });
     this.postService
       .getPosts()
@@ -30,12 +30,12 @@ export class BookComponent implements OnInit {
     if (this.postForm.valid)  {
       const {value} = this.postForm;
       this.postService.createPost(value)
-        .subscribe(next =>{
+        .subscribe(next => {
           this.postList.unshift(next);
           this.postForm.reset({
-            title: '',
-            author: '',
-            description: ''
+            tag: '',
+            url: '',
+            descriptions: ''
           });
         }, error => console.log(error));
     }

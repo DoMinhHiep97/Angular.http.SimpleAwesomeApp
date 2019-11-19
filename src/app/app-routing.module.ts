@@ -8,13 +8,13 @@ import {BookEditComponent} from './book-edit/book-edit.component';
 
 
 const routes: Routes = [{
-  path: 'book',
+  path: 'awesome',
   component: BookComponent
 }, {
-  path: 'book/:id',
+  path: 'awesome/:id',
   component: BookDetailComponent
-},{
-  path: 'book/:id/edit',
+}, {
+  path: 'awesome/:id/edit',
   component: BookEditComponent
 }];
 

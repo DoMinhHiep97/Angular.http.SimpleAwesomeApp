@@ -21,9 +21,9 @@ export class BookEditComponent implements OnInit {
 
   ngOnInit() {
     this.postForm = this.fb.group({
-      title: ['', [Validators.required, Validators.minLength(10)]],
-      author: ['', [Validators.required, Validators.minLength(10)]],
-      description: ['', [Validators.required, Validators.minLength(10)]]
+      tag: ['', [Validators.required, Validators.minLength(5)]],
+      url: ['', [Validators.required, Validators.minLength(4)]],
+      descriptions: ['', [Validators.required, Validators.minLength(10)]]
     });
     const id = +this.route.snapshot.paramMap.get('id');
     this.postService.getPostById(id).subscribe(
@@ -39,14 +39,14 @@ export class BookEditComponent implements OnInit {
   }
   onSubmit() {
     if (this.postForm.valid) {
-      const { value } = this.postForm;
+      const {value} = this.postForm;
       const data = {
         ...this.post,
         ...value
       };
       this.postService.updatePost(data).subscribe(
         next => {
-          this.router.navigate(['/book']);
+          this.router.navigate(['/awesome']);
         },
         error => console.log(error)
       );
