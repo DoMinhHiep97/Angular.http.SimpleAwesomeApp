@@ -6,10 +6,10 @@ import {PostService} from '../service/post.service';
 
 @Component({
   selector: 'app-book-edit',
-  templateUrl: './book-edit.component.html',
-  styleUrls: ['./book-edit.component.scss']
+  templateUrl: './awesome-edit.component.html',
+  styleUrls: ['./awesome-edit.component.scss']
 })
-export class BookEditComponent implements OnInit {
+export class AwesomeEditComponent implements OnInit {
   post: IPost;
   postForm: FormGroup;
   constructor(

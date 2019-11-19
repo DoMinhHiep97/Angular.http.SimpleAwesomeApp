@@ -5,10 +5,10 @@ import {PostService} from '../service/post.service';
 
 @Component({
   selector: 'app-book-detail',
-  templateUrl: './book-detail.component.html',
-  styleUrls: ['./book-detail.component.scss']
+  templateUrl: './awesome-detail.component.html',
+  styleUrls: ['./awesome-detail.component.scss']
 })
-export class BookDetailComponent implements OnInit {
+export class AwesomeDetailComponent implements OnInit {
   post: IPost;
   constructor(
     private route: ActivatedRoute,

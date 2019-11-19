@@ -5,10 +5,10 @@ import {PostService} from '../service/post.service';
 
 @Component({
   selector: 'app-book',
-  templateUrl: './book.component.html',
-  styleUrls: ['./book.component.scss']
+  templateUrl: './awesome.component.html',
+  styleUrls: ['./awesome.component.scss']
 })
-export class BookComponent implements OnInit {
+export class AwesomeComponent implements OnInit {
   postList: IPost[] = [];
   postForm: FormGroup;
   constructor(

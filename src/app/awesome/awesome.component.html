@@ -30,7 +30,7 @@
   </div>
   <div>
     <label>
-      Url
+      <h4>Url</h4>
       <br>
       <input class="form-control"  type="text" formControlName="url">
     </label>
@@ -40,7 +40,7 @@
   </div>
   <div>
     <label>
-      descriptions
+      <h4>descriptions</h4>
       <br>
       <textarea class="form-control" formControlName="descriptions" cols="50" rows="5"></textarea>
     </label>
@@ -48,7 +48,7 @@
   <div *ngIf="postForm.get('descriptions').invalid && postForm.get('descriptions').touched" style="color: red">
     Body is required and min length is 10
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit" class="btn btn-warning">Submit</button>
 </form>
     </td>
 

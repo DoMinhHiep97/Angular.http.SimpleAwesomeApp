@@ -3,7 +3,7 @@
     <label>
       <h4>tag</h4>
       <br>
-      <input type="text" formControlName="tag">
+      <input class="form-control" type="text" formControlName="tag">
     </label>
   </div>
   <div *ngIf="postForm.get('tag').invalid && postForm.get('tag').touched" style="color: red">
@@ -13,7 +13,7 @@
     <label>
       <h4>url</h4>
       <br>
-      <input  type="text" formControlName="url">
+      <input class="form-control" type="text" formControlName="url">
     </label>
   </div>
   <div *ngIf="postForm.get('url').invalid && postForm.get('url').touched" style="color: red">
@@ -21,13 +21,13 @@
   </div>
   <div>
     <label>
-      <h5>description</h5>
+      <h4>description</h4>
       <br>
-      <textarea formControlName="descriptions" cols="20" rows="20"></textarea>
+      <textarea class="form-control" formControlName="descriptions" cols="50" rows="5"></textarea>
     </label>
   </div>
   <div *ngIf="postForm.get('descriptions').invalid && postForm.get('descriptions').touched" style="color: red">
     Description is required and min length is 10
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit" class="btn btn-warning">Submit</button>
 </form>

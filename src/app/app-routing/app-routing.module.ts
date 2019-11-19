@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { BookComponent } from '../book/book.component';
-import {BookDetailComponent} from '../book-detail/book-detail.component';
-import {BookEditComponent} from '../book-edit/book-edit.component';
+import { AwesomeComponent } from '../awesome/awesome.component';
+import {AwesomeDetailComponent} from '../awesome-detail/awesome-detail.component';
+import {AwesomeEditComponent} from '../awesome-edit/awesome-edit.component';
 
 
 
 const routes: Routes = [{
   path: 'awesome',
-  component: BookComponent
+  component: AwesomeComponent
 }, {
   path: 'awesome/:id',
-  component: BookDetailComponent
+  component: AwesomeDetailComponent
 }, {
   path: 'awesome/:id/edit',
-  component: BookEditComponent
+  component: AwesomeEditComponent
 }];
 
 @NgModule({
