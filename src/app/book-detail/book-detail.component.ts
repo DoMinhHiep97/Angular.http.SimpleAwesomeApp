@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {IPost} from '../post';
+import {IPost} from '../model/post';
 import {ActivatedRoute} from '@angular/router';
-import {PostService} from '../post.service';
+import {PostService} from '../service/post.service';
 
 @Component({
   selector: 'app-book-detail',

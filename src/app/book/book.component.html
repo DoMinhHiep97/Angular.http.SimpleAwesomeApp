@@ -1,11 +1,28 @@
 <h2>My awesome List</h2>
+<table>
+  <tr>
+    <td>
+      <ul>
+        <li *ngFor="let post of postList; index as i">
+          <h3>
+            <a style="font-family: initial" [routerLink]="['/awesome', post.id]">
+              Post Id: {{post.id}} - {{post.tag}}
+            </a>
+          </h3>
+          <a class="btn btn-primary" role="button" [routerLink]="['/awesome', post.id, 'edit']">Edit</a>
 
+          <button type="button" class="btn btn-warning" style="margin-left: 20px" (click)="deletePost(i)">Delete</button>
+        </li>
+      </ul>
+    </td>
+    <td>
+      <h2>Add new awesome</h2>
 <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
   <div>
     <label>
-      tag
+      <h5>tag</h5>
       <br>
-      <input type="text" formControlName="tag">
+      <input class="form-control" type="text" formControlName="tag">
     </label>
   </div>
   <div *ngIf="postForm.get('tag').invalid && postForm.get('tag').touched" style="color: red">
@@ -15,7 +32,7 @@
     <label>
       Url
       <br>
-      <input  type="text" formControlName="url">
+      <input class="form-control"  type="text" formControlName="url">
     </label>
   </div>
   <div *ngIf="postForm.get('url').invalid && postForm.get('url').touched" style="color: red">
@@ -25,7 +42,7 @@
     <label>
       descriptions
       <br>
-      <textarea formControlName="descriptions" cols="50" rows="5"></textarea>
+      <textarea class="form-control" formControlName="descriptions" cols="50" rows="5"></textarea>
     </label>
   </div>
   <div *ngIf="postForm.get('descriptions').invalid && postForm.get('descriptions').touched" style="color: red">
@@ -33,15 +50,7 @@
   </div>
   <button type="submit">Submit</button>
 </form>
-<ul>
-  <li *ngFor="let post of postList; index as i">
-    <h3>
-      <a [routerLink]="['/awesome', post.id]">
-        Post Id: {{post.id}} - {{post.tag}}
-      </a>
-    </h3>
-    <a [routerLink]="['/awesome', post.id, 'edit']">Edit</a>
+    </td>
 
-    <button (click)="deletePost(i)">Delete</button>
-  </li>
-</ul>
+  </tr>
+</table>

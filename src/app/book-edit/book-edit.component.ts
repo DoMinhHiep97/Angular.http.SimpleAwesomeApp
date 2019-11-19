@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {IPost} from '../post';
+import {IPost} from '../model/post';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
-import {PostService} from '../post.service';
+import {PostService} from '../service/post.service';
 
 @Component({
   selector: 'app-book-edit',
